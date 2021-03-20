@@ -36,17 +36,14 @@ namespace GraduationHandout
 
         }
 
-        private Address CreateAddress()
+        private void CreateAddress()
         {
-            Address NewAddress = new Address();
+            Student NewStudent = new Student();
 
             int.TryParse(StreetNumberBox.Text, out int StreetNumber);
-            NewAddress.StreetNumber = StreetNumber;
-            NewAddress.StreetName = StreetNameBox.Text;
-            NewAddress.State = StateBox.Text;
-            NewAddress.City = CityBox.Text;
             int.TryParse(ZipCodeBox.Text, out int ZipCode);
-            NewAddress.ZipCode = ZipCode;
+
+            NewStudent.SetAddress(StreetNumber, StreetNameBox.Text, StateBox.Text, CityBox.Text, ZipCode);
 
             StreetNumberBox.Clear();
             StreetNameBox.Clear();
@@ -54,12 +51,13 @@ namespace GraduationHandout
             CityBox.Clear();
             ZipCodeBox.Clear();
 
-            return NewAddress;
+            //return NewAddress;
 
         }
 
         public Student CreateStudent()
-        {
+        { 
+
             Student NewStudent = new Student();
 
             NewStudent.FirstName = FirstNameBox.Text;
@@ -68,7 +66,7 @@ namespace GraduationHandout
             NewStudent.GPA = GPA;
             NewStudent.Major = MajorBox.Text;
 
-            StudentListBox.Items.Add(NewStudent.ToString());
+            StudentListBox.Items.Add(NewStudent);
 
             FirstNameBox.Clear();
             LastNameBox.Clear();
@@ -80,13 +78,12 @@ namespace GraduationHandout
 
         private void StudentListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var SelectedStudent = (Student)StudentListBox.SelectedItem;
-            ShowAddress address = new ShowAddress();
-            Address NewAddress = new Address();
-            NewAddress = SelectedStudent.Address;
-            address.SetupStudent(SelectedStudent);
-            address.ShowAddressBox(NewAddress);
-            address.Show();
+            var selectedstudent = (Student)StudentListBox.SelectedItem;
+            ShowAddress NewWindow = new ShowAddress();
+            NewWindow.SetupStudent(selectedstudent);
+            NewWindow.ShowAddressBox(selectedstudent);
+            NewWindow.Show();
+
         }
     }
 }

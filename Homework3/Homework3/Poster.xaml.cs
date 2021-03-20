@@ -10,27 +10,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace GraduationHandout
+namespace Homework3
 {
     /// <summary>
-    /// Interaction logic for ShowAddress.xaml
+    /// Interaction logic for Poster.xaml
     /// </summary>
-    public partial class ShowAddress : Window
+    public partial class Poster : Window
     {
-        public ShowAddress()
+        public Poster()
         {
             InitializeComponent();
+
         }
 
-        public void SetupStudent(Student student)
+        public void SetUpDialog(TVShow SelectedShow)
         {
-            FirstnameLastname.Text = $"{student.FirstName} {student.LastName}";
-        }
-
-        public void ShowAddressBox(Student address)
-        {
-            AddressBox.Text = address.Address.ToString();
-
+            TitleBox.Text = SelectedShow.Title;
+            PlotBox.Text = SelectedShow.Plot;
+            PosterBox.Source = new BitmapImage(new Uri(SelectedShow.Poster));
         }
     }
 }

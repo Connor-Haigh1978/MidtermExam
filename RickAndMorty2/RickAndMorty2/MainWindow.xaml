@@ -1,0 +1,17 @@
+﻿<Window x:Class="RickAndMorty2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RickAndMorty2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="CharacterList" Margin="0,125,0,0" SelectionChanged="CharacterList_SelectionChanged"/>
+        <ComboBox x:Name="SpeciesBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="SpeciesBox_SelectionChanged"/>
+        <ComboBox x:Name="GenderBox" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="GenderBox_SelectionChanged"/>
+        <ComboBox x:Name="StatusBox" HorizontalAlignment="Left" Margin="670,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="StatusBox_SelectionChanged"/>
+        <ListBox x:Name="FilteredCharacterList" Margin="157,10,481,324"/>
+
+    </Grid>
+</Window>

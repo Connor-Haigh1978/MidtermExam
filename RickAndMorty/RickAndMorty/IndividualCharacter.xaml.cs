@@ -10,27 +10,28 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace GraduationHandout
+namespace RickAndMorty
 {
     /// <summary>
-    /// Interaction logic for ShowAddress.xaml
+    /// Interaction logic for IndividualCharacter.xaml
     /// </summary>
-    public partial class ShowAddress : Window
+    
+    
+    public partial class IndividualCharacter : Window
     {
-        public ShowAddress()
+
+
+        public IndividualCharacter()
         {
             InitializeComponent();
+
         }
 
-        public void SetupStudent(Student student)
+        public void SetUpWindow(Results SelectedCharacter)
         {
-            FirstnameLastname.Text = $"{student.FirstName} {student.LastName}";
-        }
-
-        public void ShowAddressBox(Student address)
-        {
-            AddressBox.Text = address.Address.ToString();
-
+            NameBox.Text = SelectedCharacter.name;
+            StatusBox.Text = SelectedCharacter.status;
+            Photo.Source = new BitmapImage(new Uri(SelectedCharacter.image));
         }
     }
 }

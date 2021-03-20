@@ -29,13 +29,10 @@ namespace GraduationHandout
             GPA = gpa;
         }
 
-        public string ToString()
+        public override string ToString()
         {
-
-
-            return $"{LastName}, {FirstName} Major: {Major} GPA: {GPA} ({CalculateDistinction()})";
+             return $"{LastName}, {FirstName} Major: {Major} GPA: {GPA} ({CalculateDistinction()})";
         }
-
         public string CalculateDistinction()
         {
             string Distinction;
