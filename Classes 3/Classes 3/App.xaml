@@ -1,7 +1,7 @@
-﻿<Application x:Class="GraduationHandout.App"
+﻿<Application x:Class="Classes_3.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:GraduationHandout"
+             xmlns:local="clr-namespace:Classes_3"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

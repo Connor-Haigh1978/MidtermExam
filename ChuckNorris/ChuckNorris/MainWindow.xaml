@@ -1,0 +1,25 @@
+﻿<Window x:Class="ChuckNorris.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChuckNorris"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="https://images02.military.com/sites/default/files/styles/full/public/media/veteran-jobs/content-images/2016/03/chucknorris.jpg?itok=_J3M4O-S"/>
+        </Grid.Background>
+        <ComboBox x:Name="CategoryComboBox" HorizontalAlignment="Left" Margin="22,26,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="JokeButton" Content="Get Joke" HorizontalAlignment="Left" Margin="22,205,0,0" VerticalAlignment="Top" Height="64" Width="104" Background="#FF46FF00" Click="JokeButton_Click"/>
+        <TextBlock x:Name="JokeBox" HorizontalAlignment="Left" Margin="208,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="432" Background="Red" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="167,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF005DFF" Height="20" Width="65" Text="Category:" Foreground="White"/>
+        <TextBlock x:Name="CategoryBox" HorizontalAlignment="Left" Margin="250,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF005DFF" Height="20" Width="174" Foreground="White"/>
+        <TextBlock x:Name="CreatedAtBox" HorizontalAlignment="Left" Margin="167,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF005DFF" Height="20" Width="65" Text="Created At:" Foreground="White"/>
+        <TextBlock x:Name="CreatedAtBox1" HorizontalAlignment="Left" Margin="250,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF005DFF" Height="20" Width="174" Foreground="White"/>
+        <TextBlock x:Name="CategoryBox_Copy" HorizontalAlignment="Left" Margin="167,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF005DFF" Height="20" Width="58" Text="URL:" Foreground="White"/>
+        <TextBlock x:Name="URLBox" HorizontalAlignment="Left" Margin="250,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FF005DFF" Height="20" Width="174" Foreground="White"/>
+        <Image x:Name="ImageBox" HorizontalAlignment="Left" Height="164" Margin="531,217,0,0" VerticalAlignment="Top" Width="199"/>
+
+    </Grid>
+</Window>

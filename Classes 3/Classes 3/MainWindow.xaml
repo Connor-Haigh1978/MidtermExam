@@ -1,0 +1,34 @@
+﻿<Window x:Class="Classes_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Classes_3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FFF9D68C">
+        <TextBlock HorizontalAlignment="Center" Margin="0,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="408" Text="            The University of Oklahoma" FontFamily="Microsoft Uighur" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Height="0" Margin="225,77,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,115,0,0" Text="First Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Margin="10,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="148,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Last Name"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Margin="148,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,156,0,0" Text="Major" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="MajorBox" HorizontalAlignment="Left" Margin="10,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="148,156,0,0" Text="GPA" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="GPABox" HorizontalAlignment="Left" Margin="148,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Street Number"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="streetNumberBox" HorizontalAlignment="Left" Margin="10,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="148,258,0,0" Text="Street Name" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="streetNameBox" HorizontalAlignment="Left" Margin="148,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,304,0,0" Text="State" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="stateBox" HorizontalAlignment="Left" Margin="10,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="148,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="City"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="cityBox" HorizontalAlignment="Left" Margin="148,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,354,0,0" Text="Zipcode" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="ZipcodeBox" HorizontalAlignment="Left" Margin="10,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="StudentListBox" Margin="553,115,0,22" Background="{x:Null}" SelectionChanged="StudentListBox_SelectionChanged"/>
+        <Button x:Name="SubmitInfor" Content="Submit Information" HorizontalAlignment="Center" Margin="0,215,0,0" VerticalAlignment="Top" Background="Red" Height="49" Width="112" Click="SubmitInfor_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="Homework32.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Homework32"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="GetDataButton" Content="Get Data" HorizontalAlignment="Center" Margin="0,41,0,0" VerticalAlignment="Top" Height="49" Width="94" Click="GetDataButton_Click"/>
+        <ListBox x:Name="SacListBox" Margin="0,171,591,0"/>
+        <ComboBox x:Name="ZipCombo" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ZipCombo_SelectionChanged"/>
+        <ListBox x:Name="BiggestList" Margin="296,374,296,0"/>
+        <ListBox x:Name="ExpensiveList" Margin="581,374,10,0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="337,325,0,0" Text="Biggest" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="645,328,0,0" Text="Most Expensive" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
