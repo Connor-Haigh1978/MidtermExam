@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="PokemonListBox" SelectionChanged="PokemonListBox_SelectionChanged"/>
+        <ListBox x:Name="PokemonListBox"/>
 
     </Grid>
 </Window>

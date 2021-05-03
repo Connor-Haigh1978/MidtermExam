@@ -25,7 +25,7 @@ namespace Pokemon
         public MainWindow()
         {
             InitializeComponent();
-            string url = "https://pokeapi.co/api/v2/pokemon?limit=1200";
+            string url = "http://pcbstuou.w27.wh-2.com/webservices/3033/api/restaurants/names";
             AllPokemonAPI api;
 
             using (var client = new HttpClient())
@@ -33,20 +33,12 @@ namespace Pokemon
                 string JsonData = client.GetStringAsync(url).Result;
                 api = JsonConvert.DeserializeObject<AllPokemonAPI>(JsonData);
             }
-            foreach (ResultObject pokemon in api.results.OrderBy(x => x.name).ToList())
+            foreach (ResultObject pokemon in api.restaurants.OrderBy(x => x.name).ToList())
             {
                 PokemonListBox.Items.Add(pokemon);
             }
 
         }
 
-        private void PokemonListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            SelectedPokemonWindow NewWindow = new SelectedPokemonWindow();
-            var SelectedPokemon = (ResultObject)PokemonListBox.SelectedItem;
-            PokemonInfo api;
-            NewWindow.ShowDetails(SelectedPokemon);
-            NewWindow.Show();
-        }
     }
 }

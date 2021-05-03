@@ -1,0 +1,25 @@
+﻿@model IEnumerable<SMWYL.Models.IndividualInfo>
+
+@{
+    ViewBag.Title = "All Memes";
+}
+
+<h2 style="text-align:center; padding-bottom:10px; padding-top: 10px">All Memes</h2>
+<div class="row" 
+     <div class="col-sm-6"
+          @foreach (var item in Model)
+    {
+        <tr>
+            <div class="card" style="width: 18rem">
+                <img class="card-img-top" src="@item.url" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">@item.name, @item.id</p>
+                </div>
+            </div>
+        </tr>
+      
+    }
+      </div>
+    </div>
+    
+

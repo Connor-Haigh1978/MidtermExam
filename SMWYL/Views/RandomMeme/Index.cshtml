@@ -1,0 +1,14 @@
+﻿@model SMWYL.Models.IndividualInfo
+
+@{
+    ViewBag.Title = "Random Meme";
+}
+
+<h2 style="text-align:center">@Model.name</h2>
+<div class="text-center">
+    <img src="@Model.url" alt="Alternate Text"/>
+</div>
+<p>
+    <button>@Html.ActionLink("Another Meme", "Index") </button>
+    
+</p>
