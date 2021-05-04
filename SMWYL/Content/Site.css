@@ -22,4 +22,11 @@ select,
 textarea {
     max-width: 280px;
 }
-
+#right
+{
+    text-align:right;
+    color:red;
+}
+.Education{
+    color:red;
+}

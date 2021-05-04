@@ -123,6 +123,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MemeController.cs" />
     <Compile Include="Controllers\RandomMemeController.cs" />
+    <Compile Include="Controllers\ResumeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -278,6 +279,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Meme\Index.cshtml" />
     <Content Include="Views\RandomMeme\Index.cshtml" />
+    <Content Include="Views\Resume\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
